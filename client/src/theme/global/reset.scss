@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+body {
+  width: 100%;
+  font-size: 14px;
+  background: #f0f0f0;
+  font-family: 'Microsoft YaHei','Helvetica Neue',Arial, 微軟正黑體,'Microsoft JhengHei',
+  'Lucida Grande',
+  'Lucida Sans Unicode',
+  sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  content: normal !important;
+}
+
+em {
+  font-style: normal;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  th {
+    font-weight: normal;
+  }
+}
+
+label {
+  font-weight: normal;
+}
+
+.text-label {
+  display: inline-block;
+  padding-top: 10px;
+}
+
+.text-link {
+  color: $brand;
+}
+
+.text-line {
+  text-decoration: underline;
+}
+
+#app {
+  background: #efeff4;
+}

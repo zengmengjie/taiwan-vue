@@ -1,0 +1,198 @@
+@import '../../../utils/index.scss';
+
+.body_class {
+  background-color: #fff;
+  padding: 40px 0 0 0;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  .nav {
+    width: 12%;
+    line-height: 40px;
+    font-size: 18px;
+  }
+
+  .body_panel {
+    overflow: hidden;
+
+    .goods_list {
+      padding: 10px 0;
+
+      /deep/ .van-card {
+        font-size: 14px;
+        .van-card__num{
+          font-size: 14px;
+        }
+        .van-card__desc{
+          max-height:none;
+          white-space: normal;
+          text-overflow: clip;
+          @include text--overflow(4);
+        }
+      }
+      .spec_groups {
+        position: relative;
+        border-top: 1px solid #eaeaea;
+        padding: 0 10px;
+
+        .spec_title {
+          padding: 5px 0 12px 0;
+          font-size: 12px;
+          color: rgba(0, 0, 0, 0.87);
+        }
+        .del_btn{
+          position: absolute;
+          right: 15px;
+          top: 15px;
+          i {
+            cursor: pointer;
+            font-size: 22px;
+          }
+        }
+
+        .spec_list {
+          display: inline-block;
+          padding-bottom: 5px;
+
+          .spec_item {
+            float: left;
+            padding: 8px;
+            border: 1px solid #d9d9d9;
+            margin: 0 6px 8px 0;
+            background: #fff;
+            width: 100px;
+             position: relative;
+            cursor: pointer;
+
+            img {
+              @include wh(100%, 100%);
+            }
+
+            &>div.sticky {
+              position: absolute;
+             top: 0;
+             right: 0;
+              border-left: 15px solid #fff;
+              border-top: 8px solid #fff;
+            }
+
+            &>span {
+              font-size: 0.8em;
+              color: rgba(0, 0, 0, 0.87);
+              vertical-align: middle;
+            }
+
+            &.on {
+              border: 1px solid #f23030;
+              box-shadow: 0 0 8px #f23030;
+
+              &>div.sticky {
+                border-top: 10px solid #f23030;
+              }
+
+              &>span {
+                color: #f23030;
+              }
+            }
+          }
+
+          .option_item {
+            float: left;
+            padding: 8px 10px;
+            border: 1px solid #d9d9d9;
+            margin: 0 6px 8px 0;
+            display: table;
+            background: #fff;
+            line-height: 22px;
+            cursor: pointer;
+            position: relative;
+
+            &>div.sticky {
+              position: absolute;
+              top: 0;
+              right: 0;
+              border-left: 10px solid #fff;
+              border-top: 10px solid #fff;
+            }
+
+            &>span {
+              font-size: 0.8em;
+              color: rgba(0, 0, 0, 0.87);
+              vertical-align: middle;
+            }
+
+            &.on {
+              border: 1px solid #f23030;
+              box-shadow: 0 0 8px #f23030;
+
+              &>div.sticky {
+                border-top: 10px solid #f23030;
+              }
+
+              &>span {
+                color: #f23030;
+              }
+            }
+          }
+        }
+
+        .addNum {
+          display: table;
+          position: absolute;
+          right: 15px;
+          bottom: 5px;
+        }
+      }
+
+    }
+
+    /deep/ .van-submit-bar__bar {
+      font-size: 18px;
+      padding-left: 5px;
+      border-top: 1px solid #fafafa;
+      .van-submit-bar__price-integer,
+      .van-submit-bar__price-decimal {
+          font-weight: bold;
+      }
+
+    }
+
+    /deep/ .van-submit-bar .van-button {
+      font-size: 18px;
+    }
+    .order_form {
+      background-color: #fff;
+      padding: 15px 15px 5px;
+      margin-bottom: 80px;
+      .add_other_button {
+        .el-button {
+          @include wh(100%, 40px);
+          color: #fff;
+          margin: 0 auto 30px;
+          border-radius: 5px;
+          background: red !important;
+          border-width: 1px !important;
+          border-style: solid !important;
+          border-color: red !important;
+          border-image: initial !important;
+        }
+      }
+      .el-form-item {
+        width: 98%;
+
+        .spec_div {
+          border: 1px solid #F34336;
+          padding: 5px;
+          line-height: 18px;
+          border-radius: 4px;
+        }
+
+        .pay_span {
+          color: red;
+          font-size: 16px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

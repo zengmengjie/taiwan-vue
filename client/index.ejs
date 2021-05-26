@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>全館出清</title>
+  <meta name="description" content="全館出清">
+  <meta name="keywords" content="全館出清">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--[if IE]><link rel="shortcut icon" href="/static/favicon.ico"><![endif]-->
+  <!-- Add to home screen for Android and modern mobile browsers -->
+  <!-- <link rel="manifest" href="/static/manifest.json"> -->
+  <meta name="theme-color" content="#4DBA87">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="全館出清">
+  <link rel="apple-touch-icon" href="/static/img/icons/apple-touch-icon-152x152.png">
+  <!-- Add to home screen for Windows -->
+  <meta name="msapplication-TileImage" content="/static/img/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+  <% for (var chunk of webpack.chunks) {
+      for (var file of chunk.files) {
+        if (file.match(/\.(js|css)$/)) { %>
+  <link rel="<%= chunk.initial ? 'preload' : 'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>"
+    as="<%= file.match(/\.css$/)?'style':'script' %>">
+  <% }}} %>
+  <link rel="stylesheet" href="<%= webpackConfig.output.publicPath %>static/css/vant-css.css" />
+  <link rel="stylesheet" href="<%= webpackConfig.output.publicPath %>static/css/theme-chalk.css">
+  <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+  <script
+    src="//g.alicdn.com/fdilab/lib3rd/viewport-units-buggyfill/0.6.2/??viewport-units-buggyfill.hacks.min.js,viewport-units-buggyfill.min.js">
+  </script>
+<!-- LINE Tag Base Code -->
+<!-- Do Not Modify -->
+<script>
+  (function(g,d,o){
+    g._ltq=g._ltq||[];g._lt=g._lt||function(){g._ltq.push(arguments)};
+    var h=location.protocol==='https:'?'https://d.line-scdn.net':'http://d.line-cdn.net';
+    var s=d.createElement('script');s.async=1;
+    s.src=o||h+'/n/line_tag/public/release/v1/lt.js';
+    var t=d.getElementsByTagName('script')[0];t.parentNode.insertBefore(s,t);
+      })(window, document);
+  window._lt('init', {
+    customerType: 'lap',
+    tagId: '9f68ea47-c696-49b6-ba5f-07ca54afcf13'
+  });
+  window._lt('init', {
+    customerType: 'lap',
+    tagId: 'b4d67d64-1ca2-435a-97a7-4d7a75809e4e'
+  });
+  window._lt('init', {
+    customerType: 'lap',
+    tagId: '688a9afa-2690-4d7e-8208-466f2a8109bb'
+  });
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://tr.line.me/tag.gif?c_t=lap&t_id=9f68ea47-c696-49b6-ba5f-07ca54afcf13&e=pv&noscript=1" />
+  </noscript>
+  <!-- End LINE Tag Base Code -->
+  
+</head>
+
+<body>
+  <noscript>
+    This is your fallback content in case JavaScript fails to load.
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <script src="<%= webpackConfig.output.publicPath %>static/js/vendor.dll.js"></script>
+  <script>
+    ! function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window,
+      document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+  </script>
+
+</body>
+
+</html>

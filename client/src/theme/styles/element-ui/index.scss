@@ -1,0 +1,36 @@
+.cart-dialog {
+  .el-dialog__header {
+    border-bottom: 1px solid #f23030;
+    .el-dialog__title {
+      color: #f23030;
+    }
+  }
+  .el-dialog {
+    width: 1000px;
+    .el-dialog__headerbtn .el-dialog__close {
+      font-size: 20px;
+      font-weight: bolder;
+    }
+    .el-dialog__body {
+      padding: 10px;
+    }
+    .el-form-item {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.order_info {
+  .el-form-item {
+    margin-bottom: 15px;
+  }
+  .el-input__inner {
+    border-radius: 0;
+  }
+  .el-textarea {
+    .el-textarea__inner {
+      border-radius: 0;
+      resize: none;
+    }
+  }
+}

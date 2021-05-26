@@ -1,0 +1,52 @@
+@import '../../../utils/index.scss';
+
+//手机端首页
+.home_goods_ul {
+  &>li {
+    display: inline-block;
+    @include wh(50%, auto);
+    padding: .9vw;
+    vertical-align: top;
+
+    .item {
+      line-height: 20px;
+      color: #444;
+
+      .home_goods_img {
+        width: 100%;
+        min-height: 46vw;
+        position: relative;
+        overflow: hidden;
+
+        &>img {
+          @include wh(100%, 100%);
+          position: absolute;
+          border: 1px solid #e6e6e6;
+        }
+      }
+
+      .home_goods_pricebar {
+        line-height: 30px;
+        font-size: 12px;
+        padding: 0 .3rem;
+
+        &>span:first-child {
+          @include sc(14px, #d2122b);
+          font-weight: 600;
+          margin-right: 10px;
+        }
+
+        &>del {
+          line-height: 30px;
+        }
+      }
+
+      .home_goods_namebar {
+        font-size: 12px;
+        line-height: 16px;
+        padding: 0 5px;
+        text-align: center;
+      }
+    }
+  }
+}
